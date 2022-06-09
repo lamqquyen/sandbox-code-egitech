@@ -67,7 +67,7 @@ app.post("/students", async (req, res) => {
     const {first_name, last_name, date_of_birth} = studentInfo
 
     if (isEmpty(first_name) || isEmpty(last_name) || isEmpty(date_of_birth)) {
-      res.status(400).send("First Name, Last Name and Date of Birth cannot be empty");
+      res.status(400).send("First Name, Last Name and Date of Birth cannot be em");
     }
     
     asyncQuery("INSERT INTO student SET ?", studentInfo);
