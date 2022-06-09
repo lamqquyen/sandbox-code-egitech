@@ -1,0 +1,51 @@
+.App {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+table,
+th,
+td {
+  border: 1px solid;
+}
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
+
+.student-table-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 2px solid black;
+}
+
+.student-table {
+  width: 100%;
+}
+
+.student-col {
+  text-align: center;
+  width: 50%
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  margin: 0 20px;
+}
+
+.input-field {
+  margin: 10px 0;
+}
+
+.input-field input {
+  margin-left: 10px;
+}
+
+.error-message {
+  color: red;
+}
