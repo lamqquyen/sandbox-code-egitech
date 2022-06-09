@@ -3,7 +3,6 @@ const mysql =  require("mysql");
 const cors = require("cors");
 const bodyParser = require("body-parser")
 const isEmpty = require("lodash/isEmpty");
-const { ERROR_MESSAGE } = require("./constants");
 
 const app = express();
 
@@ -68,7 +67,7 @@ app.post("/students", async (req, res) => {
     const {first_name, last_name, date_of_birth} = studentInfo
 
     if (isEmpty(first_name) || isEmpty(last_name) || isEmpty(date_of_birth)) {
-      res.status(400).send(ERROR_MESSAGE);
+      res.status(400).send("First Name, Last Name and Date of Birth cannot be empty");
     }
     
     asyncQuery("INSERT INTO student SET ?", studentInfo);
@@ -88,7 +87,7 @@ app.put("/students/:studentId", async (req, res) => {
     const {first_name, last_name, date_of_birth} = studentInfo
 
     if (isEmpty(first_name) || isEmpty(last_name) || isEmpty(date_of_birth)) {
-      res.status(400).send(ERROR_MESSAGE);
+      res.status(400).send("First Name, Last Name and Date of Birth cannot be empty");
     }
     
     
